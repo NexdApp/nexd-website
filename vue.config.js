@@ -1,4 +1,4 @@
 module.exports = {
   transpileDependencies: ["vuetify"],
-  publicPath: process.env.NODE_ENV === "production" ? "/next-website/" : "/"
+  publicPath: process.env.NODE_ENV === "production" ? "/nexd-website/" : "/"
 };
