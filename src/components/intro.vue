@@ -32,10 +32,20 @@
               <v-row justify="end" class="pr-12" align="center">
                 <span class="title">DEMNÄCHST</span>
                 <v-col cols="3" md="2" sm="4">
-                  <v-img style="cursor:pointer" src="../assets/app-store.png"></v-img>
+                  <v-tooltip bottom>
+                    <template v-slot:activator="{ on }">
+                      <v-img v-on="on" style="cursor:pointer" src="../assets/app-store.png"></v-img>
+                    </template>
+                    <span>DEMNÄCHST</span>
+                  </v-tooltip>
                 </v-col>
                 <v-col cols="3" sm="4" md="2">
-                  <v-img style="cursor:pointer" src="../assets/google-play-badge.png"></v-img>
+                  <v-tooltip bottom>
+                    <template v-slot:activator="{ on }">
+                      <v-img style="cursor:pointer" v-on="on" src="../assets/google-play-badge.png"></v-img>
+                    </template>
+                    <span>DEMNÄCHST</span>
+                  </v-tooltip>
                 </v-col>
               </v-row>
             </v-col>
