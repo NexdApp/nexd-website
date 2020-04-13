@@ -51,7 +51,9 @@
     </v-col>
     <v-col cols="6">
       <v-row justify="end" class="pr-6">
-        <v-btn text dark>Datenschutzerklärung</v-btn>
+        <v-btn text dark @click="$router.push('/privacy')"
+          >Datenschutzerklärung</v-btn
+        >
       </v-row>
     </v-col>
   </v-row>
