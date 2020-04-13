@@ -7,7 +7,7 @@
         </v-col>
         <v-col cols="12" sm="8" class="pa-10" md="8">
           <v-row align="end">
-            <v-col cols="12" class="hidden-sm-and-down" style="height:340px"></v-col>
+            <v-col cols="12" class="hidden-sm-and-down" style="height:30vh"></v-col>
             <v-col cols="12" class="hidden-sm-and-down">
               <div class="display-3 pb-4 decor" style="font-weight: 400; line-height:1.6">
                 Nachbarn sorgen
@@ -44,12 +44,12 @@
               <v-row>
                 <v-col
                   cols="12"
-                  class="display-1 pr-10 decor"
+                  class="headline pr-10 decor"
                   style="font-weight:500"
                 >Du kannst/willst Dein Haus nicht verlassen?</v-col>
                 <v-col
                   cols="12"
-                  class="pr-10 title font-weight-regular"
+                  class="pr-10 body-1 font-weight-regular"
                 >Von einem Moment zum Nächsten können alltägliche Aufgaben zur Herausforderung werden –mal eben einkaufen gehen, ein Medikament in der Apotheke abholen, den Hund ausführen –was nun?</v-col>
               </v-row>
             </v-col>
@@ -72,11 +72,11 @@
         </v-col>
         <v-col class="my-auto">
           <v-row style="text-align: right" class="hidden-sm-and-down">
-            <v-col cols="12" class="display-1 decor pb-4">
+            <v-col cols="12" class="headline decor pb-4">
               Die Helferinnen und Helfer von
               Nexd sind für Sie da!
             </v-col>
-            <v-col class="title font-weight-regular">
+            <v-col class="body-1 font-weight-regular">
               Nexd bringt Hilfesuchende und Helfende auf einer
               Plattform zusammen. Wer Unterstützung benötigt erstellt
               einen Auftrag auf Nexd - ganz einfach über die Website,
@@ -90,11 +90,11 @@
             </v-col>
           </v-row>
           <v-row class="hidden-md-and-up">
-            <v-col cols="12" class="display-1 decor pb-4">
+            <v-col cols="12" class="headline decor pb-4">
               Die Helferinnen und Helfer von
               Nexd sind für Sie da!
             </v-col>
-            <v-col class="title font-weight-regular">
+            <v-col class="body-1 font-weight-regular">
               Nexd bringt Hilfesuchende und Helfende auf einer
               Plattform zusammen. Wer Unterstützung benötigt erstellt
               einen Auftrag auf Nexd - ganz einfach über die Website,
