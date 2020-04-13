@@ -23,7 +23,7 @@
         <span>Hotline: 0721-98419016</span>
       </v-btn>-->
       <v-btn text v-if="hideElems" @click="$router.push('/')">
-        <span>Go Back</span>
+        <span>geh zurück</span>
       </v-btn>
       <v-app-bar-nav-icon
         class="hidden-md-and-up"
