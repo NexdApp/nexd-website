@@ -1,3 +1,9 @@
+# Deployment
+
+Master is deployed to: https://www.nexd.app
+
+Develop branch is deployed to: https://preview.nexd.app
+
 # client
 
 ## Project setup
