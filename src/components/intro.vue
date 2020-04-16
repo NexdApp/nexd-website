@@ -54,7 +54,7 @@
               <v-col
                 cols="12"
                 class="headline pr-10 decor"
-                style="font-weight:500"
+                style="font-weight:400"
               >Du kannst/willst Dein Haus nicht verlassen?</v-col>
               <v-col
                 cols="12"
