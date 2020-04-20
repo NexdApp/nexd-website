@@ -14,9 +14,7 @@
       <v-spacer></v-spacer>
       <div class="hidden-sm-and-down" v-if="!hideElems">
         <v-btn text @click="$vuetify.goTo('#intro', options)">Über nexd</v-btn>
-        <v-btn text @click="$vuetify.goTo('#howitworks', options)"
-          >so funktioniert nexd</v-btn
-        >
+        <v-btn text @click="$vuetify.goTo('#howitworks', options)">so funktioniert nexd</v-btn>
         <v-btn text @click="$vuetify.goTo('#footer', options)">Anmelden</v-btn>
       </div>
       <!-- <v-btn  href="tel:555-123-4567" text>
@@ -25,11 +23,7 @@
       <v-btn text v-if="hideElems" @click="$router.push('/')">
         <span>geh zurück</span>
       </v-btn>
-      <v-app-bar-nav-icon
-        class="hidden-md-and-up"
-        v-if="!hideElems"
-        @click="drawer = !drawer"
-      ></v-app-bar-nav-icon>
+      <v-app-bar-nav-icon class="hidden-md-and-up" v-if="!hideElems" @click="drawer = !drawer"></v-app-bar-nav-icon>
     </v-app-bar>
     <v-navigation-drawer v-model="drawer" color="primary" app bottom temporary>
       <v-list nav>
@@ -72,11 +66,13 @@ export default {
     options: { duration: 500, offset: 0, easing: "easeInOutCubic" }
   }),
   created() {
-    this.hideElems = this.$route.path === "/privacy";
+    this.hideElems =
+      this.$route.path === "/privacy" || this.$route.imprint === "/imprint";
   },
   watch: {
     $route(newValue) {
-      this.hideElems = newValue.path === "/privacy";
+      this.hideElems =
+        newValue.path === "/privacy" || newValue.path === "/imprint";
     }
   },
   methods: {
