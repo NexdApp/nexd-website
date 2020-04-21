@@ -5,14 +5,13 @@
       md="6"
       class="pa-12 display-2 decor"
       style="color:#fff; font-weight:600"
-      >registriere dich bei nexd</v-col
-    >
+    >registriere dich bei nexd</v-col>
     <v-col cols="12" md="6" class="pa-12">
       <v-row justify="center" class="color-b" align="center">
-        <v-col cols="12"
-          >Jeder kann Erledigungen über nexd aufgeben oder ausführen. Jetzt
-          registrieren und bald einer der ersten Nutzer sein!</v-col
-        >
+        <v-col cols="12">
+          Jeder kann Erledigungen über nexd aufgeben oder ausführen. Jetzt
+          registrieren und bald einer der ersten Nutzer sein!
+        </v-col>
         <v-col cols="12" class="pr-12">
           <div class="subtitle-1" style="font-weight:600">E-Mail Adresse</div>
           <div>
@@ -26,14 +25,7 @@
             />
           </div>
           <div class="pt-4">
-            <v-btn
-              color="#0C2E45"
-              :disabled="!emailIsValid"
-              small
-              depressed
-              dark
-              >TEILNEHMEN</v-btn
-            >
+            <v-btn color="#0C2E45" :disabled="!emailIsValid" small depressed dark>TEILNEHMEN</v-btn>
           </div>
         </v-col>
       </v-row>
@@ -51,9 +43,8 @@
     </v-col>
     <v-col cols="6">
       <v-row justify="end" class="pr-6">
-        <v-btn text dark @click="$router.push('/privacy')"
-          >Datenschutzerklärung</v-btn
-        >
+        <v-btn block text dark @click="$router.push('/imprint')">Impressum</v-btn>
+        <v-btn block text dark @click="$router.push('/privacy')">Datenschutzerklärung</v-btn>
       </v-row>
     </v-col>
   </v-row>
