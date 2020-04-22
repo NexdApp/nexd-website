@@ -9,7 +9,7 @@
       <iframe
         width="80%"
         height="80%"
-        src="https://www.youtube.com/embed/0PmuLrq4Hno"
+        src="https://www.youtube-nocookie.com/embed/0PmuLrq4Hno"
         frameborder="0"
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
@@ -24,7 +24,7 @@
       <iframe
         width="80%"
         height="80%"
-        src="https://www.youtube.com/embed/0PmuLrq4Hno"
+        src="https://www.youtube-nocookie.com/embed/0PmuLrq4Hno"
         frameborder="0"
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
