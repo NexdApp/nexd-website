@@ -5,7 +5,8 @@
       md="6"
       class="pa-12 display-2 decor"
       style="color:#fff; font-weight:600"
-    >registriere dich bei nexd</v-col>
+      >registriere dich bei nexd</v-col
+    >
     <v-col cols="12" md="6" class="pa-12">
       <v-row justify="center" class="color-b" align="center">
         <v-col cols="12">
@@ -32,7 +33,8 @@
               small
               depressed
               dark
-            >TEILNEHMEN</v-btn>
+              >TEILNEHMEN</v-btn
+            >
           </div>
         </v-col>
       </v-row>
@@ -64,10 +66,14 @@
     <v-col cols="12" sm="6">
       <v-row justify="end" class="pa-2">
         <v-col sm="6" cols="12">
-          <v-btn block text dark @click="$router.push('/imprint')">Impressum</v-btn>
+          <v-btn block text dark @click="$router.push('/imprint')"
+            >Impressum</v-btn
+          >
         </v-col>
         <v-col sm="6" cols="12">
-          <v-btn block text dark @click="$router.push('/privacy')">Datenschutzerklärung</v-btn>
+          <v-btn block text dark @click="$router.push('/privacy')"
+            >Datenschutzerklärung</v-btn
+          >
         </v-col>
       </v-row>
     </v-col>
@@ -96,7 +102,7 @@ export default {
     email: "",
     snackbar: false,
     message: "",
-    emailIsValid: false
+    emailIsValid: false,
   }),
   methods: {
     async submitEmail() {
@@ -105,8 +111,15 @@ export default {
           "https://www.nexd.app/.netlify/functions/mailchimp?email=" +
             this.email
         )
-        .then(response => {
-          if (response && response.statusCode && response.statusCode === 200) {
+        .then((response) => {
+          if (
+            response &&
+            response.statusCode &&
+            response.statusCode === 200 &&
+            response.body &&
+            response.body.status &&
+            response.body.status === "subscribed"
+          ) {
             this.message =
               "Sie haben sich jetzt als Tester für Nexd registriert";
           } else {
@@ -123,7 +136,7 @@ export default {
       /*eslint-disable */
       let reg = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
       this.emailIsValid = reg.test(this.email);
-    }
-  }
+    },
+  },
 };
 </script>
