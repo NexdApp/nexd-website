@@ -3,23 +3,25 @@
     <v-col cols="12" class="px-6 headline decor" style="color:#4EBF96"
       >Sponsoren & Partner</v-col
     >
-    <v-col cols="12">
-      <v-carousel cycle hide-delimiters show-arrows-on-hover height="400">
-        <v-carousel-item v-for="(slide, i) in slides" :key="i">
-          <v-row class="fill-height" align="center" justify="center">
-            <v-col md="3" sm="12" v-for="(icon, j) in slide.icons" :key="j">
-              <v-row align="center" justify="center">
-                <v-img
-                  :src="icon.src"
-                  max-width="200"
-                  max-height="150"
-                  contain
-                ></v-img>
-              </v-row>
-            </v-col>
-          </v-row>
-        </v-carousel-item>
-      </v-carousel>
+    <v-col cols="12" class="pb-10">
+      <v-card outlined>
+        <v-carousel cycle hide-delimiters show-arrows-on-hover height="400">
+          <v-carousel-item v-for="(slide, i) in slides" :key="i">
+            <v-row class="fill-height" align="center" justify="center">
+              <v-col md="3" sm="12" v-for="(icon, j) in slide.icons" :key="j">
+                <v-row align="center" justify="center">
+                  <v-img
+                    :src="icon.src"
+                    max-width="200"
+                    max-height="150"
+                    contain
+                  ></v-img>
+                </v-row>
+              </v-col>
+            </v-row>
+          </v-carousel-item>
+        </v-carousel>
+      </v-card>
     </v-col>
   </v-row>
 </template>
