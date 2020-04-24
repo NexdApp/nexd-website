@@ -22,7 +22,7 @@
               hide-details
               v-model="email"
               @input="isEmailValid()"
-              style="background:#0c2e455e; outline:none; width: 60%"
+              style="background:#0c2e455e; outline:none; width: 60%; color:#fff"
             />
           </div>
           <div class="pt-4">
@@ -107,21 +107,17 @@ export default {
   methods: {
     async submitEmail() {
       await axios
-        .get(
-          "/.netlify/functions/mailchimp?email=" +
-            this.email
-        )
+        .get("/.netlify/functions/mailchimp?email=" + this.email)
         .then((response) => {
-          if (
-            response &&
-            response.statusCode === 200 &&
-            response &&
-            response.status === "subscribed"
-          ) {
-            this.message =
-              "Sie haben sich jetzt als Tester für Nexd registriert";
-          } else {
-            this.message = "Ups! Irgendwas lief schief";
+          if (response && response.status) {
+            if (response.status === "subscribed") {
+              this.message =
+                "Sie haben sich jetzt als Tester für Nexd registriert";
+            } else if (response.status === 400) {
+              this.message = "Sie haben Nexd bereits abonniert";
+            } else {
+              this.message = "Ups! Irgendwas lief schief";
+            }
           }
         })
         .catch(() => {
