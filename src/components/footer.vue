@@ -114,7 +114,6 @@ export default {
         .then((response) => {
           if (
             response &&
-            response.statusCode &&
             response.statusCode === 200 &&
             response.body &&
             response.body.status &&
