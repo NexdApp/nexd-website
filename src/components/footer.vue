@@ -108,7 +108,7 @@ export default {
     async submitEmail() {
       await axios
         .get(
-          "https://www.nexd.app/.netlify/functions/mailchimp?email=" +
+          "/.netlify/functions/mailchimp?email=" +
             this.email
         )
         .then((response) => {
