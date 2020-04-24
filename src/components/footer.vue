@@ -115,9 +115,8 @@ export default {
           if (
             response &&
             response.statusCode === 200 &&
-            response.body &&
-            response.body.status &&
-            response.body.status === "subscribed"
+            response &&
+            response.status === "subscribed"
           ) {
             this.message =
               "Sie haben sich jetzt als Tester für Nexd registriert";
