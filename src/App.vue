@@ -15,15 +15,14 @@ import appbar from "./components/appbar";
 import footerbar from "./components/footer";
 export default {
   name: "App",
-
   components: {
     appbar,
-    footerbar
+    footerbar,
   },
 
   data: () => ({
     //
-  })
+  }),
 };
 </script>
 

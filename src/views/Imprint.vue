@@ -52,6 +52,7 @@
 <script>
 export default {};
 </script>
+<<<<<<< HEAD
 <style>
 .imprint .imprint-address p {
   margin-bottom: 0;
@@ -76,3 +77,6 @@ export default {};
   font-weight: 600;
 }
 </style> 
+=======
+<style></style>
+>>>>>>> chore: prittier, commit msg check
