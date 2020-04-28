@@ -52,6 +52,11 @@ export default {
             { src: require("../assets/LogosPartners/IMG0070.jpg") },
           ],
         },
+        {
+          icons: [
+            { src: require("../assets/LogosPartners/solution-enabler.png") },
+          ],
+        },
       ],
     };
   },
