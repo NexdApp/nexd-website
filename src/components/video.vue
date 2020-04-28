@@ -4,7 +4,7 @@
       justify="center"
       align="center"
       class="hidden-sm-and-down"
-      style="height: 95vh; background: #0C2E45"
+      style="height: 95vh; background: #0c2e45;"
     >
       <iframe
         width="80%"
@@ -19,7 +19,7 @@
       justify="center"
       align="center"
       class="hidden-md-and-up"
-      style="height: 60vh; background: #0C2E45"
+      style="height: 60vh; background: #0c2e45;"
     >
       <iframe
         width="80%"
