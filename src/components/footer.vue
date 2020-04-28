@@ -109,11 +109,11 @@ export default {
       await axios
         .get("/.netlify/functions/mailchimp?email=" + this.email)
         .then((response) => {
-          if (response && response.status) {
-            if (response.status === "subscribed") {
+          if (response && response.data) {
+            if (response.data.status === "subscribed") {
               this.message =
                 "Sie haben sich jetzt als Tester für Nexd registriert";
-            } else if (response.status === 400) {
+            } else if (response.data.statusCode === 400) {
               this.message = "Sie haben Nexd bereits abonniert";
             } else {
               this.message = "Ups! Irgendwas lief schief";
