@@ -3,10 +3,11 @@
     <v-col
       cols="12"
       md="6"
-      class="pa-12 display-2 decor"
+      class="pa-12 display-2"
       style="color: #fff; font-weight: 600;"
-      >registriere dich bei nexd</v-col
-    >
+      >
+      <h2 class="headline">Registriere dich bei nexd</h2>
+    </v-col>
     <v-col cols="12" md="6" class="pa-12">
       <v-row justify="center" class="color-b" align="center">
         <v-col cols="12">
@@ -84,17 +85,6 @@
   </v-row>
 </template>
 
-<style scoped>
-.color-b {
-  color: #0c2e45;
-}
-.decor {
-  text-decoration: underline;
-  text-decoration-color: rgba(255, 255, 255, 0.39);
-  color: #0c2e455e;
-}
-</style>
-
 <script>
 import axios from "axios";
 export default {
@@ -134,3 +124,10 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.color-b {
+  color: #0c2e45;
+}
+
+</style>
