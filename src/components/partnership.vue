@@ -1,6 +1,6 @@
 <template>
   <v-row class="px-10" align="center" justify="center">
-    <v-col cols="12" class="px-6 headline decor" style="color:#4EBF96"
+    <v-col cols="12" class="px-6 headline" style="color:#4EBF96"
       >Sponsoren & Partner</v-col
     >
     <v-col cols="12" class="pb-10">
@@ -64,9 +64,5 @@ export default {
 </script>
 
 <style scoped>
-.decor {
-  text-decoration: underline;
-  text-decoration-style: solid;
-  text-decoration-color: #0c2e451c;
-}
+
 </style>

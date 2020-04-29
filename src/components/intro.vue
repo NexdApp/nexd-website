@@ -17,7 +17,7 @@
           ></v-col>
           <v-col cols="12" class="hidden-sm-and-down">
             <div
-              class="display-3 pb-4 decor"
+              class="display-3 pb-4"
               style="font-weight: 400; line-height: 1.6;"
             >
               Nachbarn sorgen für Nachbarn!
@@ -28,7 +28,7 @@
             </div>
           </v-col>
           <v-col cols="12" class="hidden-md-and-up">
-            <div class="display-2 pb-4 decor" style="font-weight: 400;">
+            <div class="display-2 pb-4" style="font-weight: 400;">
               Nachbarn sorgen für Nachbarn!
             </div>
             <div class="headline" style="line-height: 1.6; font-weight: 500;">
@@ -74,7 +74,7 @@
             <v-row>
               <v-col
                 cols="12"
-                class="headline pr-10 decor"
+                class="headline pr-10"
                 style="font-weight: 400;"
                 >Du kannst/willst Dein Haus nicht verlassen?</v-col
               >
@@ -120,7 +120,7 @@
         <v-row style="text-align: right;" class="hidden-sm-and-down">
           <v-col
             cols="12"
-            class="headline decor pb-4"
+            class="headline pb-4"
             style="font-weight: 400;"
           >
             Die Helferinnen und Helfer von Nexd sind für Sie da!
@@ -139,7 +139,7 @@
         <v-row class="hidden-md-and-up">
           <v-col
             cols="12"
-            class="headline decor pb-4"
+            class="headline pb-4"
             style="font-weight: 400;"
           >
             Die Helferinnen und Helfer von Nexd sind für Sie da!
@@ -219,9 +219,5 @@ export default {
 .bg-color {
   background: #ebeaea;
 }
-.decor {
-  text-decoration: underline;
-  text-decoration-style: solid;
-  text-decoration-color: #0c2e453b;
-}
+
 </style>

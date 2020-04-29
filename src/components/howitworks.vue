@@ -1,7 +1,7 @@
 <template>
   <v-row class="pa-10" id="howitworks">
-    <v-col cols="12" class="pa-6 headline decor" style="color: #4ebf96;"
-      >so funktioniert es</v-col
+    <v-col cols="12" class="pa-6"
+      ><h2 class="headline">So funktioniert es</h2></v-col
     >
     <v-col cols="12" class="px-8 py-2">
       <v-row
@@ -19,10 +19,11 @@
             cols="12"
             v-if="showIndex != i"
             style="height: 100px; background: #4ebf96;"
+            key="name"
           >
-            <v-row align="center" justify="center" style="height: 100%;">
+            <v-row align="center"  style="height: 100%;">
               <v-col sm="6" cols="12" md="4">
-                <v-row no-gutters align="center" justify="center">
+                <v-row no-gutters align="center" >
                   <v-img :src="item.icon" max-width="60"></v-img>
                   <span style="color: #fff;" class="pl-2">{{ item.name }}</span>
                 </v-row>
@@ -30,8 +31,9 @@
             </v-row>
           </v-col>
           <v-col
-            v-else
+            v-if="showIndex == i"
             cols="12"
+            key="info"
             style="
               text-align: center;
               background: #4ebf961a;
@@ -101,15 +103,14 @@ export default {
 <style lang="scss" scoped>
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 0.8s;
+  transition: opacity 0.3s;
 }
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
 }
-
-.decor {
-  text-decoration: underline;
-  text-decoration-style: solid;
-  text-decoration-color: #0c2e451c;
+.headline {
+  color: #4ebf96;
+  margin: 0;
 }
+
 </style>
