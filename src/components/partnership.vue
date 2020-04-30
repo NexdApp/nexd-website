@@ -1,29 +1,30 @@
 <template>
-  <v-row class="px-10" align="center" justify="center">
-    <v-col cols="12" class="px-6 headline" style="color:#4EBF96"
-      >Sponsoren & Partner</v-col
-    >
-    <v-col cols="12" class="pb-10">
-      <v-card outlined>
-        <v-carousel cycle hide-delimiters show-arrows-on-hover height="400">
-          <v-carousel-item v-for="(slide, i) in slides" :key="i">
-            <v-row class="fill-height" align="center" justify="center">
-              <v-col md="3" sm="12" v-for="(icon, j) in slide.icons" :key="j">
-                <v-row align="center" justify="center">
-                  <v-img
-                    :src="icon.src"
-                    max-width="200"
-                    max-height="150"
-                    contain
-                  ></v-img>
-                </v-row>
-              </v-col>
-            </v-row>
-          </v-carousel-item>
-        </v-carousel>
-      </v-card>
-    </v-col>
-  </v-row>
+  <v-container
+    ><v-row class="px-10" align="center" justify="center">
+      <v-col cols="12" class="px-6 headline" style="color: #4ebf96;"
+        >Sponsoren & Partner</v-col
+      >
+      <v-col cols="12" class="pb-10">
+        <v-card outlined>
+          <v-carousel cycle hide-delimiters show-arrows-on-hover height="400">
+            <v-carousel-item v-for="(slide, i) in slides" :key="i">
+              <v-row class="fill-height" align="center" justify="center">
+                <v-col md="3" sm="12" v-for="(icon, j) in slide.icons" :key="j">
+                  <v-row align="center" justify="center">
+                    <v-img
+                      :src="icon.src"
+                      max-width="200"
+                      max-height="150"
+                      contain
+                    ></v-img>
+                  </v-row>
+                </v-col>
+              </v-row>
+            </v-carousel-item>
+          </v-carousel>
+        </v-card>
+      </v-col> </v-row
+  ></v-container>
 </template>
 
 <script>
@@ -63,6 +64,4 @@ export default {
 };
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

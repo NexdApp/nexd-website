@@ -1,63 +1,64 @@
 <template>
-  <v-row class="pa-10" id="howitworks">
-    <v-col cols="12" class="pa-6"
-      ><h2 class="headline">So funktioniert es</h2></v-col
-    >
-    <v-col cols="12" class="px-8 py-2">
-      <v-row
-        align="center"
-        justify="center"
-        @mouseenter="showIndex = i"
-        @mouseleave="showIndex = -1"
-        class="my-4"
-        v-for="(item, i) in details"
-        :key="i"
-        style="cursor: pointer;"
+  <v-container>
+    <v-row class="pa-10" id="howitworks">
+      <v-col cols="12" class="pa-6"
+        ><h2 class="headline">So funktioniert es</h2></v-col
       >
-        <transition name="fade" mode="out-in">
-          <v-col
-            cols="12"
-            v-if="showIndex != i"
-            style="height: 100px; background: #4ebf96;"
-            key="name"
-          >
-            <v-row align="center"  style="height: 100%;">
-              <v-col sm="6" cols="12" md="4">
-                <v-row no-gutters align="center" >
-                  <v-img :src="item.icon" max-width="60"></v-img>
-                  <span style="color: #fff;" class="pl-2">{{ item.name }}</span>
-                </v-row>
-              </v-col>
-            </v-row>
-          </v-col>
-          <v-col
-            v-if="showIndex == i"
-            cols="12"
-            key="info"
-            style="
-              text-align: center;
-              background: #4ebf961a;
-              color: #0c2e45;
-              vertical-align: middle;
-            "
-          >
-            <v-row
-              align="center"
-              no-gutters
-              style="min-height: 80px;"
-              justify="center"
-              >{{ item.info }}</v-row
+      <v-col cols="12" class="px-8 py-2">
+        <v-row
+          align="center"
+          justify="center"
+          @mouseenter="showIndex = i"
+          @mouseleave="showIndex = -1"
+          class="details-item my-4"
+          v-for="(item, i) in details"
+          :key="i"
+          style="cursor: pointer;"
+        >
+          <transition name="fade" mode="out-in">
+            <v-col
+              cols="12"
+              v-if="showIndex != i"
+              style="height: 100px;"
+              key="name"
             >
-          </v-col>
-        </transition>
-      </v-row>
-    </v-col>
-    <v-col class="pa-6" style="color: #0c2e45;"
-      >Nexd sorgt so für eine schnelle Bereitstellung von Produkten an
-      Hilfesuchende und eine Entlastung von Pflegekräften in täglichen
-      Besorgungen.</v-col
-    >
-  </v-row>
+              <v-row align="center" style="height: 100%;">
+                <v-col sm="6" cols="12" md="4">
+                  <v-row no-gutters align="center">
+                    <v-img :src="item.icon" max-width="60"></v-img>
+                    <span class="pl-2">{{ item.name }}</span>
+                  </v-row>
+                </v-col>
+              </v-row>
+            </v-col>
+            <v-col
+              v-if="showIndex == i"
+              cols="12"
+              key="info"
+              style="
+                text-align: center;
+                background: #4ebf961a;
+                vertical-align: middle;
+              "
+            >
+              <v-row
+                align="center"
+                no-gutters
+                style="min-height: 80px;"
+                justify="center"
+                >{{ item.info }}</v-row
+              >
+            </v-col>
+          </transition>
+        </v-row>
+      </v-col>
+      <v-col class="pa-6" style="color: #0c2e45;"
+        >Nexd sorgt so für eine schnelle Bereitstellung von Produkten an
+        Hilfesuchende und eine Entlastung von Pflegekräften in täglichen
+        Besorgungen.</v-col
+      >
+    </v-row>
+  </v-container>
 </template>
 
 <script>
@@ -112,5 +113,10 @@ export default {
   color: #4ebf96;
   margin: 0;
 }
-
+.details-item {
+  background: #4ebf96;
+  border-radius: 4px;
+  box-shadow: 1px 2px 6px 0 rgba(0, 0, 0, 0.31);
+  color: #fff;
+}
 </style>
