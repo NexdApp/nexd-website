@@ -1,35 +1,43 @@
 <template>
   <div>
     <v-app-bar app color="primary" dark elevate-on-scroll>
-      <v-img
-        alt="nexd"
-        class="shrink"
-        contain
-        min-width="100"
-        src="../assets/logo.png"
-        width="100"
-        height="40"
-      />
+      <v-container>
+        <div class="app-bar-container">
+          <v-img
+            alt="nexd"
+            class="shrink"
+            contain
+            min-width="100"
+            src="../assets/logo.png"
+            width="100"
+            height="40"
+          />
 
-      <v-spacer></v-spacer>
-      <div class="hidden-sm-and-down" v-if="!hideElems">
-        <v-btn text @click="$vuetify.goTo('#intro', options)">Über nexd</v-btn>
-        <v-btn text @click="$vuetify.goTo('#howitworks', options)"
-          >so funktioniert nexd</v-btn
-        >
-        <v-btn text @click="$vuetify.goTo('#footer', options)">Anmelden</v-btn>
-      </div>
-      <!-- <v-btn  href="tel:555-123-4567" text>
+          <v-spacer></v-spacer>
+          <div class="hidden-sm-and-down" v-if="!hideElems">
+            <v-btn text @click="$vuetify.goTo('#intro', options)"
+              >Über nexd</v-btn
+            >
+            <v-btn text @click="$vuetify.goTo('#howitworks', options)"
+              >so funktioniert nexd</v-btn
+            >
+            <v-btn text @click="$vuetify.goTo('#footer', options)"
+              >Anmelden</v-btn
+            >
+          </div>
+          <!-- <v-btn  href="tel:555-123-4567" text>
         <span>Hotline: 0721-98419016</span>
       </v-btn>-->
-      <v-btn text v-if="hideElems" @click="$router.push('/')">
-        <span>geh zurück</span>
-      </v-btn>
-      <v-app-bar-nav-icon
-        class="hidden-md-and-up"
-        v-if="!hideElems"
-        @click="drawer = !drawer"
-      ></v-app-bar-nav-icon>
+          <v-btn text v-if="hideElems" @click="$router.push('/')">
+            <span>geh zurück</span>
+          </v-btn>
+          <v-app-bar-nav-icon
+            class="hidden-md-and-up"
+            v-if="!hideElems"
+            @click="drawer = !drawer"
+          ></v-app-bar-nav-icon>
+        </div>
+      </v-container>
     </v-app-bar>
     <v-navigation-drawer v-model="drawer" color="primary" app bottom temporary>
       <v-list nav>
@@ -88,3 +96,8 @@ export default {
   },
 };
 </script>
+<style scoped>
+.app-bar-container {
+  display: flex;
+}</style
+>>
