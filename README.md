@@ -1,8 +1,10 @@
 # Deployment
 
-Master is deployed to: https://www.nexd.app
+Current quick-solution was implemented in wix.com with several additions.
 
-Develop branch is deployed to: https://preview.nexd.app
+Master was deployed to: https://www.nexd.app
+
+Develop branch was deployed to: https://preview.nexd.app
 
 # client
 
